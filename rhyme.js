@@ -38,6 +38,23 @@ function handleInput(event) {
   }
 
 
+  for (let index = keyword.length - 1; index >= minLetterElement.value - 1; index--) {
+    console.log(minLetterElement.value)
+    const element = keyword[index];
+    // Make a container element for the list
+    //
+    listLabel = document.createElement('h3');
+    listLabel.setAttribute("id", `${index + 1}-list`);
+    // Make the list
+    listElement = document.createElement('ul')
+
+    listContainer.appendChild(listLabel);
+    listLabel.innerHTML = `Words with ${index + 1} letters`;
+    listContainer.appendChild(listElement);
+
+  }
+
+
 // handle
 function handleInput(event){
   let word = this.value
