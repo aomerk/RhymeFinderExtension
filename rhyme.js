@@ -4,6 +4,27 @@ const rhymesLongerThanElement = document.querySelector('#rhyme-limit')
 
 //add event listener
 rhymeElement.oninput = handleInput;
+  // do not refresh page
+  event.preventDefault();
+  // find results element
+  const resultsListElement = document.getElementById("resultsList");
+
+  // clear resultsListElement element.
+  resultsListElement.innerHTML = '';
+  let keyword = rhymeElement.value;
+  if (keyword.length === 0) {
+
+    return false;
+  }
+
+  let vowelArr = []
+  for (let index = keyword.length - 1; index >= 0; index--) {
+    const letter = keyword[index];
+    if (vowelDictionary.includes(letter)) {
+      vowelArr.push(letter);
+    }
+  }
+
 
 // handle
 function handleInput(event){
