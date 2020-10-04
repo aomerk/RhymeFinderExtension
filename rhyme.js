@@ -1,5 +1,6 @@
 // find input field
 const rhymeElement = document.querySelector('#rhyme-input');
+const rhymesLongerThanElement = document.querySelector('#rhyme-limit')
 
 //add event listener
 rhymeElement.oninput = handleInput;
