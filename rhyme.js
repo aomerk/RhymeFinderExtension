@@ -1,9 +1,21 @@
-// find input field
+// find elements
 const rhymeElement = document.querySelector('#rhyme-input');
 const rhymesLongerThanElement = document.querySelector('#rhyme-limit')
+const minLetterElement = document.querySelector('#min-len')
+
+const rhymeSearch = document.querySelector('#search-button')
+
+
+// save vowel letters
+const vowelDictionary = ["a", "e", "ı", "i", "u", "ü", "o", "ö"];
+
 
 //add event listener
-rhymeElement.oninput = handleInput;
+rhymeSearch.onclick = handleInput;
+
+
+// handle input event.
+function handleInput(event) {
   // do not refresh page
   event.preventDefault();
   // find results element
