@@ -30,6 +30,16 @@
               placeholder="mutasyon">
             <small id="wordInput" class="form-text text-muted">There are 81742 turkish words in database.</small>
           </div>
+          <div class="form-group">
+            <label for="rhyme-limit">Minimum number of rhyming vowels</label>
+            <input type="number" class="form-control" value="2" id="rhyme-limit" placeholder="less than 2 is bad">
+          </div>
+          <div class="form-group">
+            <label for="min-len">Minimum number of letters</label>
+            <input type="number" class="form-control" value="3" id="min-len" placeholder="less than 3 is bad">
+          </div>
+
+          <button  id="search-button" class="btn btn-primary">Search</button>
     </div>
 </body>
 <script src="rhyme.js"></script>
